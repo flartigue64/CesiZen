@@ -1,0 +1,58 @@
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.deps.json
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.pdb
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.csproj.AssemblyReference.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.AssemblyInfoInputs.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.AssemblyInfo.cs
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.csproj.CoreCompileInputs.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.sourcelink.json
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\refint\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.pdb
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\ref\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.deps.json
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.runtimeconfig.json
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.pdb
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.csproj.AssemblyReference.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.AssemblyInfoInputs.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.AssemblyInfo.cs
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.csproj.CoreCompileInputs.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.sourcelink.json
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\refint\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.pdb
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.genruntimeconfig.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\ref\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.deps.json
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.runtimeconfig.json
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.pdb
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.csproj.AssemblyReference.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.AssemblyInfoInputs.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.AssemblyInfo.cs
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.csproj.CoreCompileInputs.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.sourcelink.json
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\refint\CesiZenModel.dll
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.pdb
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.genruntimeconfig.cache
+C:\Users\flart\Documents\cesi\indiv\Bloc 2\mobile\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\ref\CesiZenModel.dll
+C:\Users\flart\source\repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.csproj.AssemblyReference.cache
+C:\Users\flart\source\repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flart\source\repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.AssemblyInfoInputs.cache
+C:\Users\flart\source\repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.AssemblyInfo.cs
+C:\Users\flart\source\repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.csproj.CoreCompileInputs.cache
+C:\Users\flart\source\repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.sourcelink.json
+C:\Users\flart\source\repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.dll
+C:\Users\flart\source\repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\refint\CesiZenModel.dll
+C:\Users\flart\source\repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.pdb
+C:\Users\flart\Source\Repos\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.deps.json
+C:\Users\flart\Source\Repos\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.runtimeconfig.json
+C:\Users\flart\Source\Repos\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.dll
+C:\Users\flart\Source\Repos\cesizen\cesizen\CesiZen\CesiZenModel\bin\Debug\net8.0\CesiZenModel.pdb
+C:\Users\flart\Source\Repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\CesiZenModel.genruntimeconfig.cache
+C:\Users\flart\Source\Repos\cesizen\cesizen\CesiZen\CesiZenModel\obj\Debug\net8.0\ref\CesiZenModel.dll

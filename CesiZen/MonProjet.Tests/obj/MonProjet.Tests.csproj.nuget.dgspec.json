@@ -1,0 +1,540 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\MonProjet.Tests\\MonProjet.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\CesiZenDomain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\CesiZenDomain.csproj",
+        "projectName": "CesiZenDomain",
+        "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\CesiZenDomain.csproj",
+        "packagesPath": "C:\\Users\\flart\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\flart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj",
+        "projectName": "CesiZenInfrastructure",
+        "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj",
+        "packagesPath": "C:\\Users\\flart\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\flart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj",
+        "projectName": "CesiZenModel",
+        "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj",
+        "packagesPath": "C:\\Users\\flart\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\flart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenWebApp\\CesiZenWebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenWebApp\\CesiZenWebApp.csproj",
+        "projectName": "CesiZenWebApp",
+        "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenWebApp\\CesiZenWebApp.csproj",
+        "packagesPath": "C:\\Users\\flart\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenWebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\flart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\CesiZenDomain.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\CesiZenDomain.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZen\\CesiZen.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZen\\CesiZen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZen\\CesiZen.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZen\\CesiZen.csproj",
+        "projectName": "CesiZen",
+        "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZen\\CesiZen.csproj",
+        "packagesPath": "C:\\Users\\flart\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZen\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\flart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\CesiZenDomain.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\CesiZenDomain.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\MonProjet.Tests\\MonProjet.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\MonProjet.Tests\\MonProjet.Tests.csproj",
+        "projectName": "MonProjet.Tests",
+        "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\MonProjet.Tests\\MonProjet.Tests.csproj",
+        "packagesPath": "C:\\Users\\flart\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\MonProjet.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\flart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\CesiZenDomain.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenDomain\\CesiZenDomain.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenInfrastructure\\CesiZenInfrastructure.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenModel\\CesiZenModel.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenWebApp\\CesiZenWebApp.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZenWebApp\\CesiZenWebApp.csproj"
+              },
+              "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZen\\CesiZen.csproj": {
+                "projectPath": "C:\\Users\\flart\\Documents\\cesi\\indiv\\Bloc 2\\cesizen\\cesizen\\CesiZen\\CesiZen\\CesiZen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MSTest": {
+              "target": "Package",
+              "version": "[3.6.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

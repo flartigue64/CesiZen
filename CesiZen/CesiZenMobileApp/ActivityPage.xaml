@@ -1,0 +1,52 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CesiZenMobileApp.ActivityPage"
+             Title="Activités"
+             BackgroundColor="#F5F5DC">
+
+    <Grid Padding="10" RowSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Liste des activités"
+               FontSize="24"
+               TextColor="#2E8B57"
+               HorizontalOptions="Center"
+               Margin="0,20,0,20"
+               Grid.Row="0" />
+
+        <CollectionView x:Name="ActiviteListView"
+                        Grid.Row="1"
+                        ItemsLayout="VerticalList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="#444"
+                           BackgroundColor="#2E8B57"
+                           CornerRadius="12"
+                           Margin="10"
+                           Padding="25"
+                           HasShadow="True">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnActivityTapped" />
+                        </Frame.GestureRecognizers>
+
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
+                            <Label Text="{Binding Nom}"
+                                   FontSize="22"
+                                   FontAttributes="Bold"
+                                   TextColor="White"
+                                   HorizontalTextAlignment="Center" />
+
+                            <Label Text="{Binding Description}"
+                                   FontSize="16"
+                                   TextColor="White"
+                                   HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

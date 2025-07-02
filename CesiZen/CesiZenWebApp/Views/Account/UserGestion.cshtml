@@ -1,0 +1,89 @@
+﻿@model List<CesiZenInfrastructure.Dto.UtilisateurDto>
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    ViewData["Title"] = "Gestion des Utilisateurs";
+    var rolesDisponibles = new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Utilisateur", Value = "1" },
+        new SelectListItem { Text = "Admin", Value = "2" }
+    };
+}
+
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+<form asp-action="UserGestion" method="get" class="mb-4">
+    <div class="input-group">
+        <input type="text" name="searchEmail" class="form-control" placeholder="Rechercher par e-mail..." value="@ViewContext.HttpContext.Request.Query["searchEmail"]" />
+        <button type="submit" class="btn btn-outline-primary">Rechercher</button>
+    </div>
+</form>
+
+@if (Model.Any())
+{
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Rôle</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Nom</td>
+                    <td>@user.Prenom</td>
+                    <td>@user.Email</td>
+                    <td>
+                        <form asp-action="UpdateRole" method="post" class="form-inline d-flex align-items-center gap-2">
+                            <input type="hidden" name="Id" value="@user.Id" />
+                            <select name="Role" class="form-select form-select-sm" onchange="handleRoleChange(this)" data-original="@user.Role">
+                                @foreach (var role in rolesDisponibles)
+                                {
+                                    <option value="@role.Value" selected="@(user.Role.ToString() == role.Value ? "selected" : null)">
+                                        @role.Text
+                                    </option>
+                                }
+                            </select>
+                            <button type="submit" class="btn btn-sm btn-primary d-none">Sauvegarder</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-action="DeleteUser" method="post" style="display:inline;">
+                            <input type="hidden" name="Id" value="@user.Id" />
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?');">
+                                <i class="fa fa-trash"></i> Supprimer
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Aucun utilisateur trouvé.</p>
+}
+
+@section Scripts {
+    <script>
+        function handleRoleChange(selectElement) {
+            const originalValue = selectElement.getAttribute("data-original");
+            const currentValue = selectElement.value;
+            const form = selectElement.closest("form");
+            const button = form.querySelector("button[type='submit']");
+
+            if (currentValue !== originalValue) {
+                button.classList.remove("d-none");
+            } else {
+                bu 
+                tton.classList.add("d-none");
+            }
+        }
+    </script>
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "Name": "Nouveau profil",
+    "Projects": [
+      {
+        "Path": "CesiZen\\CesiZen.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "CesiZenWebApp\\CesiZenWebApp.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "AppMobile",
+    "Projects": [
+      {
+        "Path": "CesiZen\\CesiZen.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "CesiZenMobileApp\\CesiZenMobileApp.csproj",
+        "Action": "Start",
+        "DebugTarget": "HONOR LLY-NX1 (Android 14.0 - API 34)"
+      }
+    ]
+  },
+  {
+    "Name": "AppWeb",
+    "Projects": [
+      {
+        "Path": "CesiZen\\CesiZen.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "CesiZenWebApp\\CesiZenWebApp.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      }
+    ]
+  },
+  {
+    "Name": "Demo",
+    "Projects": [
+      {
+        "Path": "CesiZen\\CesiZen.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "CesiZenWebApp\\CesiZenWebApp.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "CesiZenMobileApp\\CesiZenMobileApp.csproj",
+        "Action": "Start",
+        "DebugTarget": "HONOR LLY-NX1 (Android 14.0 - API 34)"
+      }
+    ]
+  }
+]

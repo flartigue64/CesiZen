@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CesiZenMobileApp.Exercicederespiration478Page"
+             Title="Exercicederespiration478Page"
+             BackgroundColor="#F5F5DC">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25" HorizontalOptions="Center">
+
+            <!-- Titre -->
+            <Label Text="Exercice de respiration 4-7-8"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#2E8B57" />
+
+            <!-- Description -->
+            <Label Text="Inspire 4 secondes, retiens 7, expire 8. Une méthode simple et efficace pour apaiser le mental et ralentir le rythme cardiaque."
+                   FontSize="16"
+                   FontAttributes="Italic"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black" />
+
+            <!-- Bouton de lancement -->
+            <Button Text="Lancer"
+                    x:Name="StartButton"
+                    BackgroundColor="#2E8B57"
+                    TextColor="White"
+                    Padding="10"
+                    Clicked="OnStartClicked"
+                    CornerRadius="10" />
+
+            <!-- Bulle animée -->
+            <Frame x:Name="BreathBubble"
+                   WidthRequest="50"
+                   HeightRequest="50"
+                   BackgroundColor="#2E8B57"
+                   CornerRadius="100"
+                   HasShadow="False"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+
+            <!-- Bouton Terminer -->
+            <Button Text="Terminer"
+                BackgroundColor="BlueViolet"
+                TextColor="White"
+                Padding="10"
+                Clicked="OnFinishClicked"
+                CornerRadius="10" />
+
+            <Label x:Name="MessageLabel" TextColor="Red" HorizontalOptions="Center" IsVisible="False" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

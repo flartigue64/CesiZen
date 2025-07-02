@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Ecoute Son";
+    var userId = ViewBag.UserId ?? 0;
+    var activityId = ViewBag.ActivityId ?? 0;
+}
+
+<h1 style="text-align: center;">@ViewBag.activityName</h1>
+<h5>@ViewBag.activityDescription</h5>
+
+<p style="font-size: 1.5rem; text-align: center; line-height: 1.5; margin-top: 50px;">Son de forêt</p>
+<div style="text-align: center; margin-top: 20px;">
+    <video width="640" height="360" controls>
+        <source src="~/Images/Forest.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+    </video>
+</div>
+
+<p style="font-size: 1.5rem; text-align: center; line-height: 1.5; margin-top: 50px;">Son de pluie</p>
+<div style="text-align: center; margin-top: 20px;">
+    <video width="640" height="360" controls>
+        <source src="~/Images/pluie.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+    </video>
+</div>
+
+<p style="font-size: 1.5rem; text-align: center; line-height: 1.5; margin-top: 50px;">Son de l'océan</p>
+<div style="text-align: center; margin-top: 20px;">
+    <video width="640" height="360" controls>
+        <source src="~/Images/Ocean.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+    </video>
+</div>
+
+<!-- 🔽 Bouton Terminer -->
+<div style="text-align: center; margin-top: 60px;">
+    <form method="post" action="@Url.Action("CreateActivityMetadata", "Activite")">
+        <input type="hidden" name="userId" value="@userId" />
+        <input type="hidden" name="activityId" value="@activityId" />
+        <button type="submit" style="padding: 12px 30px; background-color: #f44336; color: white; border: none; border-radius: 5px; font-size: 1.1rem; cursor: pointer;">
+            Terminer
+        </button>
+    </form>
+</div>

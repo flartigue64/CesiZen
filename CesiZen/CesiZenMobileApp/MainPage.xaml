@@ -1,0 +1,60 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="CesiZenMobileApp.MainPage"
+             Title="Accueil"
+             BackgroundColor="#F5F5DC">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="30">
+
+            <!-- Section Présentation -->
+            <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Bienvenue sur"
+                       FontSize="22"
+                       HorizontalTextAlignment="Center" 
+                       TextColor="BlueViolet"/>
+                <Label Text="CesiZen"
+                       FontSize="28"
+                       TextColor="#2E8B57"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" />
+                <Label FontSize="16"
+                       TextColor="Black"
+                       Text="CesiZen est une application innovante dédiée au bien-être, qui permet aux utilisateurs de réaliser facilement des activités relaxantes et de découvrir une multitude d’articles inspirants sur le bien-être. Que vous cherchiez à prendre soin de vous au quotidien ou à explorer de nouvelles pratiques apaisantes, CesiZen vous offre une expérience fluide et enrichissante, avec des outils simples et intuitifs pour vous accompagner à chaque étape."
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap" />
+            </VerticalStackLayout>
+
+            <!-- Section principale : Activités et Logo -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="20">
+                <!-- Activités -->
+                <VerticalStackLayout Grid.Column="0">
+                    <Frame BorderColor="#2E8B57" BackgroundColor="White" CornerRadius="8" HasShadow="True">
+                        <VerticalStackLayout>
+                            <Button Text="Activités"
+                    FontSize="20"
+                    TextColor="White"
+                    BackgroundColor="#2E8B57"
+                    Padding="10"
+                    FontAttributes="Bold"
+                    Clicked="OnActivitiesButtonClicked" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+
+
+                <!-- Logo -->
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="logo.png" HeightRequest="120" Aspect="AspectFit" />
+                    <Label Text="Notre logo, symbole de simplicité et d’efficacité"
+                           FontSize="14"
+                           TextColor="Gray"
+                           FontAttributes="Italic"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,10,0,0" />
+                </VerticalStackLayout>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

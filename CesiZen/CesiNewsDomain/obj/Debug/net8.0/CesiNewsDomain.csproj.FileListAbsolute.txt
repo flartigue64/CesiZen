@@ -1,0 +1,17 @@
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\bin\Debug\net8.0\CesiNewsDomain.deps.json
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\bin\Debug\net8.0\CesiNewsDomain.dll
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\bin\Debug\net8.0\CesiNewsDomain.pdb
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\bin\Debug\net8.0\CesiNewsInfrastructure.dll
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\bin\Debug\net8.0\CesiNewsModel.dll
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\bin\Debug\net8.0\CesiNewsInfrastructure.pdb
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\bin\Debug\net8.0\CesiNewsModel.pdb
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\CesiNewsDomain.csproj.AssemblyReference.cache
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\CesiNewsDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\CesiNewsDomain.AssemblyInfoInputs.cache
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\CesiNewsDomain.AssemblyInfo.cs
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\CesiNewsDomain.csproj.CoreCompileInputs.cache
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\CesiNews.68ADC52E.Up2Date
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\CesiNewsDomain.dll
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\refint\CesiNewsDomain.dll
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\CesiNewsDomain.pdb
+C:\Users\flart\Downloads\CDA24-CesiNews-main\CDA24-CesiNews-main\CesiNewsDomain\obj\Debug\net8.0\ref\CesiNewsDomain.dll

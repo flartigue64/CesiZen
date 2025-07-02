@@ -1,0 +1,46 @@
+<Shell
+    x:Class="CesiZenMobileApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CesiZenMobileApp"
+    Shell.FlyoutBehavior="Flyout"
+    Title="CesiZenMobileApp"
+    BackgroundColor="#2E8B57"
+    FlyoutBackgroundColor="#2E8B57"
+    Shell.TitleColor="White"
+    Shell.ForegroundColor="White">
+
+    <!-- Menu de navigation -->
+    <FlyoutItem Title="Menu">
+        <Tab Title="Accueil" Route="MainPage">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem x:Name="ConnexionFlyout" Title="Connexion">
+        <Tab Title="Connexion" Route="ConnexionPage">
+            <ShellContent ContentTemplate="{DataTemplate local:ConnexionPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem x:Name="AccountFlyout" Title="Account">
+        <Tab Title="Account" Route="AccountPage">
+            <ShellContent ContentTemplate="{DataTemplate local:AccountPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem x:Name="ActivityFlyout" Title="Activity">
+        <Tab Title="Activity" Route="ActivityPage">
+            <ShellContent ContentTemplate="{DataTemplate local:ActivityPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem x:Name="HistoricFlyout" Title="Historic">
+        <Tab Title="Historic" Route="HistoricPage">
+            <ShellContent ContentTemplate="{DataTemplate local:HistoricPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem x:Name="ArticleFlyout" Title="Article">
+        <Tab Title="Article" Route="ArticlePage">
+            <ShellContent ContentTemplate="{DataTemplate local:ArticlePage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <!-- Ajoutez d'autres items de menu ici si nécessaire -->
+</Shell>

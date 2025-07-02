@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CesiZenMobileApp.SéancederelaxationPage"
+             Title="SéancederelaxationPage"
+             BackgroundColor="#F5F5DC">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Titre principal -->
+            <Label Text="🧘‍♂️ Séance Zen – &quot;Relaxation et sérénité&quot;"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#2E8B57" />
+
+            <!-- Préparation -->
+            <Label Text="🔹 Préparation (2 min)"
+                   FontSize="20"
+                   TextColor="Green"
+                   FontAttributes="Bold" />
+
+            <VerticalStackLayout Spacing="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="• Installation confortable (1 min)"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="Black" />
+                    <Label Text="Assieds-toi confortablement sur ton tapis ou un coussin. Ferme les yeux et prends quelques instants pour te centrer. Assure-toi d'être dans un endroit calme, sans distraction."
+                           FontSize="16"
+                           TextColor="Black" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="• Respiration profonde (1 min)"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="Black" />
+                    <Label Text="Inspire profondément par le nez, en sentant l'air remplir tes poumons, puis expire lentement par la bouche. Répète cette respiration pendant une minute pour calmer ton esprit."
+                           FontSize="16"
+                           TextColor="Black" />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Séance de relaxation -->
+            <Label Text="🔹 Séance de relaxation (6 min)"
+                   FontSize="20"
+                   TextColor="Green"
+                   FontAttributes="Bold" />
+
+            <VerticalStackLayout Spacing="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="• Concentration sur la respiration (2 min)"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="Black" />
+                    <Label Text="Concentre-toi uniquement sur ta respiration. Observe l'air qui entre et sort de ton corps. Si des pensées apparaissent, laisse-les passer comme des nuages et ramène doucement ton attention sur ta respiration."
+                           FontSize="16"
+                           TextColor="Black" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="• Détente musculaire progressive (2 min)"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="Black" />
+                    <Label Text="Commence par contracter légèrement les muscles des pieds, puis relâche. Remonte progressivement vers les mollets, les cuisses, le ventre, le dos, les bras, les mains et le visage, contracte et relâche chaque groupe musculaire. Cette technique aide à relâcher toute tension corporelle."
+                           FontSize="16"
+                           TextColor="Black" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="• Visualisation apaisante (2 min)"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="Black" />
+                    <Label Text="Imagine-toi dans un endroit calme et paisible, comme une plage au coucher du soleil ou dans une forêt tranquille. Visualise les détails de cet endroit, comme les sons, les odeurs et la sensation de calme qui t'envahit."
+                           FontSize="16"
+                           TextColor="Black" />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Retour à l'instant présent -->
+            <Label Text="🔹 Retour à l'instant présent (2 min)"
+                   FontSize="20"
+                   TextColor="Green"
+                   FontAttributes="Bold" />
+
+            <VerticalStackLayout Spacing="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="• Respiration profonde assise (1 min)"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="Black" />
+                    <Label Text="Assis(e), prends une dernière respiration profonde, inspire profondément par le nez et expire doucement par la bouche. Laisse cette dernière respiration te connecter pleinement à l'instant présent."
+                           FontSize="16"
+                           TextColor="Black" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="• Ouverture des yeux et étirement léger (1 min)"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="Black" />
+                    <Label Text="Ouvre doucement les yeux et étire tes bras au-dessus de ta tête, puis relâche. Fais quelques mouvements légers pour revenir à l'état de pleine conscience."
+                           FontSize="16"
+                           TextColor="Black" />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+
+            <Button Text="Terminer"
+                BackgroundColor="BlueViolet"
+                TextColor="White"
+                Padding="10"
+                Clicked="OnFinishClicked"
+                CornerRadius="10" />
+
+            <Label x:Name="MessageLabel" TextColor="Red" HorizontalOptions="Center" IsVisible="False" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

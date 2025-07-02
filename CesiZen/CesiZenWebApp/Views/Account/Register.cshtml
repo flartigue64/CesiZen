@@ -1,0 +1,60 @@
+﻿@model CesiZenModel.Entities.Utilisateur
+
+@{
+    ViewData["Title"] = "Inscription";
+}
+
+<h1 style="text-align: center;">@ViewData["Title"]</h1>
+
+<p style="text-align: center;">
+    Remplissez ce formulaire pour créer un compte.
+</p>
+
+<form asp-action="Create" method="post" style="max-width: 500px; margin: 0 auto;">
+    @Html.AntiForgeryToken()
+
+    <fieldset style="border: 2px solid #ccc; padding: 1.5em; border-radius: 8px;">
+        <legend style="text-align: center;">Informations d'inscription</legend>
+
+        <div style="margin-bottom: 1em;">
+            <label asp-for="Nom"></label>
+            <input asp-for="Nom" class="form-control" style="width: 100%; padding: 0.5em;" />
+            <span asp-validation-for="Nom" class="text-danger"></span>
+        </div>
+
+        <div style="margin-bottom: 1em;">
+            <label asp-for="Prenom"></label>
+            <input asp-for="Prenom" class="form-control" style="width: 100%; padding: 0.5em;" />
+            <span asp-validation-for="Prenom" class="text-danger"></span>
+        </div>
+
+        <div style="margin-bottom: 1em;">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" type="email" class="form-control" style="width: 100%; padding: 0.5em;" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div style="margin-bottom: 1em;">
+            <label asp-for="mot_de_passe"></label>
+            <input asp-for="mot_de_passe" type="password" class="form-control" style="width: 100%; padding: 0.5em;" />
+            <span asp-validation-for="mot_de_passe" class="text-danger"></span>
+        </div>
+    </fieldset>
+
+    <div style="text-align: center; margin-top: 1em;">
+        <button type="submit" style="padding: 0.5em 1em;">S'inscrire</button>
+    </div>
+</form>
+
+<div style="text-align: center; margin-top: 1em;">
+    <p>Vous avez déjà un compte ?</p>
+    <a href="/Account/Connexion">
+        <button type="button" style="padding: 0.5em 1em;">Se connecter</button>
+    </a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

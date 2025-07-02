@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = Context.Session.GetString("ActivityName") ?? "Activité";
+    var description = Context.Session.GetString("ActivityDescription") ?? "Description non disponible.";
+    var userId = ViewBag.UserId ?? 0;
+    var activityId = ViewBag.ActivityId ?? 0;
+}
+
+<h1 style="text-align: center;">@ViewBag.activityName</h1>
+
+<h5>@ViewBag.activityDescription</h5>
+
+<p id="instruction" class="instruction-text">Appuyez sur le bouton Lancer pour démarrer l'exercice</p>
+
+<div id="bubble" class="bubble"></div>
+
+<div class="button-container">
+    <button class="btn-start" onclick="startAnimation()">Lancer</button>
+</div>
+
+<div class="button-container">
+    <a href="@Url.Action("Activity", "Activite")" class="btn-back">Retour à la liste des activités</a>
+</div>
+
+<div class="button-container" id="finish-button-container" style="display: none;">
+    <form method="post" action="@Url.Action("CreateActivityMetadata", "Activite")">
+        <button type="submit" class="btn-finish">Terminer</button>
+    </form>
+</div>
+
+<script>
+    let isActivityCompleted = false;
+
+    function startAnimation() {
+        const bubble = document.getElementById('bubble');
+        const instruction = document.getElementById('instruction');
+        const finishButton = document.getElementById('finish-button-container');
+
+        if (isActivityCompleted) {
+            instruction.innerHTML = "Appuyez sur le bouton Lancer pour démarrer l'exercice";
+            bubble.style.width = '50px';
+            bubble.style.height = '50px';
+            isActivityCompleted = false;
+            finishButton.style.display = 'none';
+            return;
+        }
+
+        instruction.innerHTML = "Respirer";
+        bubble.style.transition = "all 4s";
+        bubble.style.width = '200px';
+        bubble.style.height = '200px';
+
+        setTimeout(() => {
+            bubble.style.transition = "none";
+            instruction.innerHTML = "Retenez votre respiration";
+
+            setTimeout(() => {
+                bubble.style.transition = "all 8s";
+                bubble.style.width = '50px';
+                bubble.style.height = '50px';
+                instruction.innerHTML = "Expirer";
+
+                setTimeout(() => {
+                    instruction.innerHTML = "Fin de l'activité<br>Appuyez sur le bouton Lancer pour redémarrer l'exercice";
+                    isActivityCompleted = true;
+
+                    // Afficher le bouton Terminer
+                    finishButton.style.display = 'block';
+                }, 8000);
+
+            }, 7000);
+        }, 4000);
+    }
+</script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .activity-title {
+        font-size: 2rem;
+        margin-top: 30px;
+        color: #333;
+    }
+
+    .activity-description {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        color: #555;
+        padding: 0 20px;
+    }
+
+    .instruction-text {
+        font-size: 1.5rem;
+        color: #555;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .bubble {
+        width: 50px;
+        height: 50px;
+        background-color: #2E8B57;
+        border-radius: 50%;
+        position: relative;
+        margin: 20px auto;
+        transition: all 0.5s;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .btn-start {
+        padding: 12px 30px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btn-start:hover {
+            background-color: #45a049;
+        }
+
+    .btn-back {
+        padding: 12px 30px;
+        background-color: #2196F3;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        transition: background-color 0.3s;
+    }
+
+        .btn-back:hover {
+            background-color: #0b79d0;
+        }
+
+    .btn-finish {
+        padding: 12px 30px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btn-finish:hover {
+            background-color: #d32f2f;
+        }
+</style>

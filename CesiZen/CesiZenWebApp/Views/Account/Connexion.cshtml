@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Utilisateur connexion";
+}
+<h1 style="text-align: center;">@ViewData["Title"]</h1>
+
+<p style="text-align: center;">
+    Utilisez cette page pour vous connecter à votre compte utilisateur.
+</p>
+
+@if (TempData["Message"] != null)
+{
+    <div style="color: green;">@TempData["Message"]</div>
+}
+
+
+<form method="post" style="max-width: 400px; margin: 0 auto;">
+    <fieldset style="border: 2px solid #ccc; padding: 1.5em; border-radius: 8px;">
+        <legend style="text-align: center;">Détails de connexion</legend>
+
+        <div style="margin-bottom: 1em;">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5em;" />
+        </div>
+
+        <div style="margin-bottom: 1em;">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required style="width: 100%; padding: 0.5em;" />
+        </div>
+    </fieldset>
+
+    <div style="text-align: center; margin-top: 1em;">
+        <button type="submit" style="padding: 0.5em 1em;">Connexion</button>
+    </div>
+</form>
+
+<div style="text-align: center; margin-top: 1em;">
+    <p>Pas encore de compte ?</p>
+    <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Register">
+        <button type="button" style="padding: 0.5em 1em;">Créer un compte</button>
+    </a>
+</div>

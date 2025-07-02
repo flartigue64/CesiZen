@@ -1,0 +1,37 @@
+﻿@using CesiZenInfrastructure.Dto
+
+@{
+    ViewData["Title"] = "Articles";
+    var roleId = ViewBag.RoleId;
+}
+
+<!-- Titre principal -->
+<h1 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 30px; font-weight: 600;">
+    @ViewData["Title"]
+</h1>
+
+<!-- Bouton "+" -->
+@if (roleId == 2)
+{
+    <div style="text-align: right; margin: 0 30px 20px 0;">
+        <a class="nav-link text-white" asp-area="" asp-controller="Article" asp-action="CreateArticle"
+           style="display: inline-block; background-color: #28a745; color: white; font-size: 1.5rem; padding: 10px 20px; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s;">
+            +
+        </a>
+    </div>
+}
+
+<!-- Liste verticale des articles -->
+<div style="display: flex; flex-direction: column; gap: 20px; padding: 20px;">
+    @foreach (var article in (List<ArticleDto>)ViewData["Articles"])
+    {
+        var RouteNom = article.Titre.Replace(" ", "").Replace("-", "");
+        <a class="nav-link text-white" href="@Url.Action("LoadArticle", "Article", new { id = article.Id, redirectTo = RouteNom })" style="width: 100%;">
+            <div style="width: 100%; border: 2px solid #444; background-color: #2E8B57; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 25px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 15px; text-align: center; letter-spacing: 0.5px;">
+                    @article.Titre
+                </h3>
+            </div>
+        </a>
+    }
+</div>

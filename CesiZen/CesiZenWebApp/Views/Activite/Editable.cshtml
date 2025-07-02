@@ -1,0 +1,36 @@
+﻿@{
+    var pageTitle = "Édition d'activité";   // Titre de la page fixe
+    var activityTitle = ViewBag.Title as string ?? "Nouvelle activité";  // Titre modifiable
+    var content = ViewBag.Content as string ?? "";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-center" style="color: #28a745;">@pageTitle</h2>
+
+    <form method="post" asp-action="SaveActivityContent">
+        <div class="mb-3">
+            <label for="Title" class="form-label">Titre de l'activité</label>
+            <input type="text" id="Title" name="Title" value="@activityTitle" class="form-control" placeholder="Titre de l'activité" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="editor" class="form-label">Contenu</label>
+            <textarea id="editor" name="Content" class="form-control" rows="10">@Html.Raw(content)</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+        <a href="@Url.Action("ActivityList", "Activity")" class="btn btn-secondary ms-2">Annuler</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/2leidrqh6ag0dikdhz9ke2z7lt3mzv93748dutdvymmzfuu9/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#editor',
+            plugins: 'image media link code',
+            toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright | image media link | code',
+            height: 400
+        });
+    </script>
+}
