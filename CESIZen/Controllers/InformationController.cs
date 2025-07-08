@@ -18,12 +18,10 @@ namespace CESIZen.Controllers
         // GET: /Information
         public async Task<IActionResult> Index()
         {
-            var informations = await _context.Informations
-                .Where(i => i.EstPublie)
-                .OrderBy(i => i.OrdreAffichage)
+            var articles = await _context.Articles
                 .ToListAsync();
 
-            return View("~/Views/Information/Index.cshtml", informations);
+            return View("~/Views/Information/Index.cshtml", articles);
         }
 
         // GET: /Information/Details/5
