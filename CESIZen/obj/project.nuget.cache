@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q5FF4fMZaY8=",
+  "dgSpecHash": "y446daXGiJQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\flart\\Source\\Repos\\CESIZen\\CESIZen\\CESIZen.csproj",
+  "projectFilePath": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\CESIZen.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\flart\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\flart\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
