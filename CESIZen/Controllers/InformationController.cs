@@ -15,7 +15,7 @@ namespace CESIZen.Controllers
             _context = context;
         }
 
-        // GET: /Information
+        // GET: /Articles
         public async Task<IActionResult> Index()
         {
             var articles = await _context.Articles
@@ -24,17 +24,17 @@ namespace CESIZen.Controllers
             return View("~/Views/Information/Index.cshtml", articles);
         }
 
-        // GET: /Information/Details/5
+        // GET: /Articles/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
 
-            var information = await _context.Informations
-                .FirstOrDefaultAsync(i => i.Id == id && i.EstPublie);
+            var articles = await _context.Articles
+                .FirstOrDefaultAsync(i => i.Id == id);
 
-            if (information == null) return NotFound();
+            if (articles == null) return NotFound();
 
-            return View("~/Views/Information/Details.cshtml", information);
+            return View("~/Views/Information/Details.cshtml", articles);
         }
     }
 }
