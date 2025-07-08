@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\flart\\source\\repos\\CesiZen\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\account\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\account\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -18,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "CESIZen\\Views\\Account\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeToolTip": "CESIZen\\Views\\Account\\ChangePassword.cshtml",
+              "ViewState": "AgIAAEoAAAAAAAAAAADwv1EAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T08:36:27.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Manage.cshtml",
+              "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Manage.cshtml",
+              "RelativeDocumentMoniker": "CESIZen\\Views\\Account\\Manage.cshtml",
+              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Manage.cshtml",
+              "RelativeToolTip": "CESIZen\\Views\\Account\\Manage.cshtml",
+              "ViewState": "AgIAAF4AAAAAAAAAAADwv28AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T08:35:16.751Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -34,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "CESIZen\\Views\\Account\\Register.cshtml",
@@ -47,12 +81,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "CESIZen\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Login.cshtml*",
-              "RelativeToolTip": "CESIZen\\Views\\Account\\Login.cshtml*",
+              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "CESIZen\\Views\\Account\\Login.cshtml",
               "ViewState": "AgIAAHEAAAAAAAAAAADwv5gAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-08T08:26:40.915Z",
