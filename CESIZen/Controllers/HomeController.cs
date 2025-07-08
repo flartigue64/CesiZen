@@ -1,21 +1,26 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CESIZen.Models;
+using CesiZen.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CesiZen.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly CesiZenDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, CesiZenDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        var activites = await _context.Activites.ToListAsync();
+        return View(activites);
     }
 
     public IActionResult Privacy()
