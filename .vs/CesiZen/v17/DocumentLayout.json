@@ -7,14 +7,6 @@
       "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\admin\\information\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\admin\\information\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\admin\\information\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\admin\\information\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\admin\\information\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\admin\\information\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\admin\\information\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -25,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\controllers\\informationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\controllers\\informationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\admin\\information\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\admin\\information\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -68,7 +56,7 @@
               "RelativeDocumentMoniker": "CESIZen\\Views\\Admin\\Information\\Delete.cshtml",
               "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Admin\\Information\\Delete.cshtml",
               "RelativeToolTip": "CESIZen\\Views\\Admin\\Information\\Delete.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvzUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-08T09:28:47.517Z",
               "EditorCaption": ""
@@ -76,32 +64,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Admin\\Information\\Edit.cshtml",
-              "RelativeDocumentMoniker": "CESIZen\\Views\\Admin\\Information\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Admin\\Information\\Edit.cshtml",
-              "RelativeToolTip": "CESIZen\\Views\\Admin\\Information\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T09:28:22.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Admin\\Information\\Details.cshtml",
-              "RelativeDocumentMoniker": "CESIZen\\Views\\Admin\\Information\\Details.cshtml",
-              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Admin\\Information\\Details.cshtml",
-              "RelativeToolTip": "CESIZen\\Views\\Admin\\Information\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T09:27:45.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Admin\\Information\\Index.cshtml",
               "RelativeDocumentMoniker": "CESIZen\\Views\\Admin\\Information\\Index.cshtml",
@@ -114,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "InformationAdminController.cs",
               "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Controllers\\Admin\\InformationAdminController.cs",
               "RelativeDocumentMoniker": "CESIZen\\Controllers\\Admin\\InformationAdminController.cs",
@@ -127,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Activite.cs",
               "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Models\\Activite.cs",
               "RelativeDocumentMoniker": "CESIZen\\Models\\Activite.cs",
@@ -140,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "InformationController.cs",
               "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Controllers\\InformationController.cs",
               "RelativeDocumentMoniker": "CESIZen\\Controllers\\InformationController.cs",
@@ -153,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Article.cs",
               "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Models\\Article.cs",
               "RelativeDocumentMoniker": "CESIZen\\Models\\Article.cs",
@@ -162,19 +124,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T09:04:51.929Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Admin\\Information\\Create.cshtml",
-              "RelativeDocumentMoniker": "CESIZen\\Views\\Admin\\Information\\Create.cshtml",
-              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Admin\\Information\\Create.cshtml",
-              "RelativeToolTip": "CESIZen\\Views\\Admin\\Information\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T09:03:16.171Z",
               "EditorCaption": ""
             }
           ]
