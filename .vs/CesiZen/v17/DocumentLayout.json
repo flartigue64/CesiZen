@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\flart\\source\\repos\\CesiZen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|c:\\users\\flart\\source\\repos\\cesizen\\cesizen\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4ED1FE3-C4B4-488F-869E-3BB50878CEBC}|CESIZen\\CESIZen.csproj|solutionrelative:cesizen\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +34,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "CESIZen\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "CESIZen\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAADwv00AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "CESIZen\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "CESIZen\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAADwv3sAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T07:29:56.357Z",
+              "WhenOpened": "2025-07-08T08:26:44.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "CESIZen\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\flart\\source\\repos\\CesiZen\\CESIZen\\Views\\Account\\Login.cshtml*",
+              "RelativeToolTip": "CESIZen\\Views\\Account\\Login.cshtml*",
+              "ViewState": "AgIAAHEAAAAAAAAAAADwv5gAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T08:26:40.915Z",
               "EditorCaption": ""
             }
           ]
