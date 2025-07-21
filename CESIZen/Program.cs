@@ -8,11 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Replace the SQL Server configuration with:
 builder.Services.AddDbContext<CesiZenDbContext>(options =>
-    options.UseSqlServer(
-    builder.Configuration.GetConnectionString("DefaultConnection")
-));
-
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Configurer Identity avec Utilisateur personnalis�
 builder.Services.AddIdentity<Utilisateur, IdentityRole<int>>(options => {
