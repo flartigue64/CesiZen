@@ -1,0 +1,37 @@
+name: 01-3 - Integration - SNYK
+
+on:
+  workflow_call
+
+jobs:
+  SecurityCheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore CESIZen.sln
+
+      - name: Run Snyk Test
+        uses: snyk/actions/dotnet@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: test
+          args: --severity-threshold=medium --org=${{ secrets.SNYK_ORG_ID }}
+
+      - name: Run Snyk Monitor
+        if: always()
+        uses: snyk/actions/dotnet@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: monitor
+          args: --severity-threshold=medium --org=${{ secrets.SNYK_ORG_ID }}
