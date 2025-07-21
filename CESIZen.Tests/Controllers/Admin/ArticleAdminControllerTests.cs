@@ -5,6 +5,7 @@ using CESIZen.Controllers.Admin;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Moq;
+using CesiZen.Data;
 
 namespace CESIZen.Tests.Controllers.Admin
 {
