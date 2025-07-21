@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace CESIZen.Data
+namespace CesiZen.Data
 {
     public class CesiZenDbContext : IdentityDbContext<Utilisateur, IdentityRole<int>, int>
     {
