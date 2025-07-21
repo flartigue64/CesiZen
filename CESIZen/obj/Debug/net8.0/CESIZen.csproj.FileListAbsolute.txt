@@ -1433,7 +1433,6 @@ C:\Users\flart\Documents\cesi\indiv\Bloc 3\CesiZen\CESIZen\bin\Debug\net8.0\NuGe
 C:\Users\flart\Documents\cesi\indiv\Bloc 3\CesiZen\CESIZen\bin\Debug\net8.0\NuGet.ProjectModel.dll
 C:\Users\flart\Documents\cesi\indiv\Bloc 3\CesiZen\CESIZen\bin\Debug\net8.0\NuGet.Protocol.dll
 C:\Users\flart\Documents\cesi\indiv\Bloc 3\CesiZen\CESIZen\bin\Debug\net8.0\NuGet.Versioning.dll
-C:\Users\flart\Documents\cesi\indiv\Bloc 3\CesiZen\CESIZen\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\flart\Documents\cesi\indiv\Bloc 3\CesiZen\CESIZen\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\flart\Documents\cesi\indiv\Bloc 3\CesiZen\CESIZen\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Users\flart\Documents\cesi\indiv\Bloc 3\CesiZen\CESIZen\bin\Debug\net8.0\System.Composition.Convention.dll
