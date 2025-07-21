@@ -1,5 +1,4 @@
 ﻿using CesiZen.Data;
-using CESIZen.Migrations;
 using CESIZen.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
