@@ -2,8 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
-using CESIZen.Controllers;
+using CesiZen.Controllers;
 using CesiZen.Data;
+using CESIZen.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CESIZen.Tests.Controllers
@@ -30,9 +31,9 @@ namespace CESIZen.Tests.Controllers
             var testActivite = new Activite 
             { 
                 Id = 1, 
-                Titre = "Test Activité",
-                DatePublication = DateTime.Now,
-                EstPublie = true 
+                Nom = "Test Activité",
+                Description = "Description de l'activité",
+                ContenuHtml = "<p>Contenu HTML de l'activité</p>"
             };
             context.Activites.Add(testActivite);
             context.SaveChanges();

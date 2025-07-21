@@ -4,6 +4,7 @@ using CESIZen.Controllers.Admin;
 using CesiZen.Data;
 using CESIZen.Models;
 using Microsoft.AspNetCore.Mvc;
+using CESIZen.Controllers.Admin;
 
 namespace CESIZen.Tests.Controllers.Admin
 {
@@ -30,13 +31,12 @@ namespace CESIZen.Tests.Controllers.Admin
                 Id = 1, 
                 Titre = "Test Article",
                 Contenu = "Contenu test",
-                DateCreation = DateTime.Now
             };
             
             context.Articles.Add(article);
             context.SaveChanges();
 
-            var controller = new ArticleAdminController(context);
+            var controller = new InformationAdminController(context);
 
             // Act
             var result = controller.Details(1) as ViewResult;
@@ -53,12 +53,11 @@ namespace CESIZen.Tests.Controllers.Admin
             // Arrange
             using var context = GetInMemoryDbContext(Guid.NewGuid().ToString());
             
-            var controller = new ArticleAdminController(context);
+            var controller = new InformationAdminController(context);
             var newArticle = new Article 
             { 
                 Titre = "Nouvel Article",
                 Contenu = "Contenu du nouvel article",
-                DateCreation = DateTime.Now
             };
 
             // Act
