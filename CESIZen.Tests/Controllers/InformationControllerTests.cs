@@ -1,7 +1,7 @@
 ﻿// InformationControllerTests.cs
 using Microsoft.EntityFrameworkCore;
 using CESIZen.Controllers;
-using CESIZen.Data;
+using CesiZen.Data;
 using CESIZen.Models;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,7 +1,7 @@
 // ArticleAdminControllerTests.cs
 using Microsoft.EntityFrameworkCore;
 using CESIZen.Controllers.Admin;
-using CESIZen.Data;
+using CesiZen.Data;
 using CESIZen.Models;
 using Microsoft.AspNetCore.Mvc;
 

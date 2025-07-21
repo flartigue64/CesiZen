@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
 using CESIZen.Controllers;
-using CESIZen.Data;
+using CesiZen.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CESIZen.Tests.Controllers
