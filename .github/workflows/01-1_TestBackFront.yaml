@@ -54,7 +54,7 @@ jobs:
 
       - name: Populate test DB
         run: |
-          mysql --host 127.0.0.1 --port 3306 -u root -ptoor test < CESIZen.Tests/insert_test_user.sql
+          mysql --host 127.0.0.1 --port 3306 -u root -ptoor test < CESIZen.Tests/Controllers/insert_test_user.sql
 
       - name: Run unit tests
         run: dotnet test CESIZen.Tests/CESIZen.Tests.csproj --collect:"XPlat Code Coverage"
