@@ -1,10 +1,8 @@
-// ArticleAdminControllerTests.cs
 using Microsoft.EntityFrameworkCore;
 using CESIZen.Controllers.Admin;
 using CesiZen.Data;
 using CESIZen.Models;
 using Microsoft.AspNetCore.Mvc;
-using CESIZen.Controllers.Admin;
 
 namespace CESIZen.Tests.Controllers.Admin
 {
@@ -21,25 +19,25 @@ namespace CESIZen.Tests.Controllers.Admin
         }
 
         [TestMethod]
-        public void Details_ValidId_ReturnsViewWithModel()
+        public async Task Details_ValidId_ReturnsViewWithModel()
         {
             // Arrange
             using var context = GetInMemoryDbContext(Guid.NewGuid().ToString());
-            
+
             var article = new Article 
             { 
                 Id = 1, 
                 Titre = "Test Article",
                 Contenu = "Contenu test",
             };
-            
+
             context.Articles.Add(article);
-            context.SaveChanges();
+            await context.SaveChangesAsync();
 
             var controller = new InformationAdminController(context);
 
             // Act
-            var result = controller.Details(1) as ViewResult;
+            var result = await controller.Details(1) as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
@@ -48,11 +46,11 @@ namespace CESIZen.Tests.Controllers.Admin
         }
 
         [TestMethod]
-        public void Create_Post_ValidModel_RedirectsToIndex()
+        public async Task Create_Post_ValidModel_RedirectsToIndex()
         {
             // Arrange
             using var context = GetInMemoryDbContext(Guid.NewGuid().ToString());
-            
+
             var controller = new InformationAdminController(context);
             var newArticle = new Article 
             { 
@@ -61,14 +59,12 @@ namespace CESIZen.Tests.Controllers.Admin
             };
 
             // Act
-            var result = controller.Create(newArticle);
+            var result = await controller.Create(newArticle) as RedirectToActionResult;
 
             // Assert
-            Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
-            
-            var redirectResult = result as RedirectToActionResult;
-            Assert.AreEqual("Index", redirectResult.ActionName);
-            
+            Assert.IsNotNull(result);
+            Assert.AreEqual("Index", result.ActionName);
+
             // Vérifier que l'article a été ajouté
             Assert.AreEqual(1, context.Articles.Count());
         }
