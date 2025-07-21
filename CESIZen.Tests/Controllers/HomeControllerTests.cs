@@ -42,7 +42,7 @@ namespace CESIZen.Tests.Controllers
             var controller = new HomeController(mockLogger.Object, context);
 
             // Act
-            var result = controller.Index();
+            var result = await controller.Index();
 
             // Assert
             Assert.IsInstanceOfType(result, typeof(ViewResult));
