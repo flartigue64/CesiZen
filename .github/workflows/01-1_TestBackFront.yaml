@@ -1,0 +1,67 @@
+name: 01-1 - Test Back Front
+
+on:
+  workflow_call
+
+jobs:
+  Helloworld:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo Hello
+
+  Backend:
+    needs: [Helloworld]
+    runs-on: ubuntu-latest
+
+    services:
+      mariadb:
+        image: mariadb:latest
+        env:
+          MARIADB_ROOT_PASSWORD: toor
+          MARIADB_DATABASE: test
+          MARIADB_USER: test
+          MARIADB_PASSWORD: test
+        ports:
+          - 3306:3306
+        options: --health-cmd="healthcheck.sh --connect --innodb_initialized" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    env:
+      BDD_HOST: 127.0.0.1
+      BDD_NAME: test
+      BDD_USER: test
+      BDD_PASS: test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore CESIZen.sln
+
+      - name: Build solution
+        run: dotnet build CESIZen.sln --no-restore
+
+      - name: Database Cnx Check
+        run: |
+          sudo apt-get install -y mysql-client
+          mysql --host 127.0.0.1 --port 3306 -u root -ptoor -e "SHOW DATABASES"
+
+      - name: Populate test DB
+        run: |
+          mysql --host 127.0.0.1 --port 3306 -u root -ptoor test < CESIZen.Tests/insert_test_user.sql
+
+      - name: Run unit tests
+        run: dotnet test CESIZen.Tests/CESIZen.Tests.csproj --collect:"XPlat Code Coverage"
+
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: dotnet-coverage-report
+          path: '**/TestResults'
+          retention-days: 3
