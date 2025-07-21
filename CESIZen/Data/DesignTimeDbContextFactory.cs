@@ -9,7 +9,9 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<CesiZenDbC
         var connectionString = "Server=127.0.0.1;Port=3306;Database=CESIZenDb;User=root;Password=MonMotDePasse123!;";
 
         var optionsBuilder = new DbContextOptionsBuilder<CesiZenDbContext>();
-        optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        
+        // Use a specific MySQL version instead of ServerVersion.AutoDetect to avoid connection issues
+        optionsBuilder.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 21)));
 
         return new CesiZenDbContext(optionsBuilder.Options);
     }
