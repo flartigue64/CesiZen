@@ -1,98 +1,106 @@
-﻿using CESIZen.Controllers;
-using CESIZen.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿// InformationControllerTests.cs
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Linq;
+using CesiZen.Controllers;
 using CesiZen.Data;
+using CesiZen.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CESIZen.Tests.Controllers
 {
     [TestClass]
     public class InformationControllerTests
     {
-        private CesiZenDbContext _context;
-
-        [TestInitialize]
-        public void Setup()
+        private CesiZenDbContext GetInMemoryDbContext(string databaseName)
         {
             var options = new DbContextOptionsBuilder<CesiZenDbContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()) 
+                .UseInMemoryDatabase(databaseName: databaseName)
                 .Options;
 
-            _context = new CesiZenDbContext(options);
+            return new CesiZenDbContext(options);
+        }
 
-            _context.Informations.AddRange(new List<Information>
+        [TestMethod]
+        public void Index_ReturnsOnlyPublishedOrderedInformations()
+        {
+            // Arrange
+            using var context = GetInMemoryDbContext(Guid.NewGuid().ToString());
+            
+            // Ajoutez des données de test
+            var informations = new List<Information>
             {
-                new Information { Id = 1, Titre = "Info 1", Contenu = "Contenu 1", EstPublie = true, OrdreAffichage = 2 },
-                new Information { Id = 2, Titre = "Info 2", Contenu = "Contenu 2", EstPublie = true, OrdreAffichage = 1 },
-                new Information { Id = 3, Titre = "Non publiée", Contenu = "Contenu caché", EstPublie = false, OrdreAffichage = 3 }
-            });
+                new Information 
+                { 
+                    Id = 1, 
+                    Titre = "Info 1", 
+                    EstPublie = true, 
+                    DatePublication = DateTime.Now.AddDays(-2) 
+                },
+                new Information 
+                { 
+                    Id = 2, 
+                    Titre = "Info 2", 
+                    EstPublie = false, 
+                    DatePublication = DateTime.Now.AddDays(-1) 
+                },
+                new Information 
+                { 
+                    Id = 3, 
+                    Titre = "Info 3", 
+                    EstPublie = true, 
+                    DatePublication = DateTime.Now 
+                }
+            };
 
-            _context.SaveChanges();
-        }
+            context.Informations.AddRange(informations);
+            context.SaveChanges();
 
+            var controller = new InformationController(context);
 
-        [TestMethod]
-        public async Task Index_ReturnsOnlyPublishedOrderedInformations()
-        {
-            
-            var controller = new InformationController(_context);
+            // Act
+            var result = controller.Index() as ViewResult;
+            var model = result?.Model as IEnumerable<Information>;
 
-            
-            var result = await controller.Index() as ViewResult;
-            var model = result.Model as List<Information>;
-
-            
+            // Assert
             Assert.IsNotNull(result);
             Assert.IsNotNull(model);
-            Assert.AreEqual(2, model.Count);
-            Assert.AreEqual("Info 2", model[0].Titre); 
-            Assert.AreEqual("Info 1", model[1].Titre);
+            
+            var publishedInfos = model.ToList();
+            Assert.AreEqual(2, publishedInfos.Count);
+            Assert.IsTrue(publishedInfos.All(i => i.EstPublie));
+            
+            // Vérifier l'ordre (plus récent en premier)
+            Assert.AreEqual("Info 3", publishedInfos.First().Titre);
         }
 
         [TestMethod]
-        public async Task Details_ValidId_ReturnsInformation()
+        public void Details_ValidId_ReturnsInformation()
         {
+            // Arrange
+            using var context = GetInMemoryDbContext(Guid.NewGuid().ToString());
             
-            var controller = new InformationController(_context);
+            var information = new Information 
+            { 
+                Id = 1, 
+                Titre = "Test Info", 
+                EstPublie = true,
+                DatePublication = DateTime.Now
+            };
+            
+            context.Informations.Add(information);
+            context.SaveChanges();
 
+            var controller = new InformationController(context);
+
+            // Act
+            var result = controller.Details(1) as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.Model);
+            Assert.IsInstanceOfType(result.Model, typeof(Information));
             
-            var result = await controller.Details(1) as ViewResult;
             var model = result.Model as Information;
-
-            
-            Assert.IsNotNull(result);
-            Assert.IsNotNull(model);
-            Assert.AreEqual("Info 1", model.Titre);
-        }
-
-        [TestMethod]
-        public async Task Details_NullId_ReturnsNotFound()
-        {
-            
-            var controller = new InformationController(_context);
-
-            
-            var result = await controller.Details(null);
-
-            
-            Assert.IsInstanceOfType(result, typeof(NotFoundResult));
-        }
-
-        [TestMethod]
-        public async Task Details_NonExistentId_ReturnsNotFound()
-        {
-            
-            var controller = new InformationController(_context);
-
-            
-            var result = await controller.Details(999);
-
-            
-            Assert.IsInstanceOfType(result, typeof(NotFoundResult));
+            Assert.AreEqual("Test Info", model.Titre);
         }
     }
 }

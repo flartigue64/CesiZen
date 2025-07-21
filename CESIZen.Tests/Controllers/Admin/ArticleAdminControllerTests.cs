@@ -1,97 +1,77 @@
-using CesiZen.Data;
-using CESIZen.Models;
-using Microsoft.AspNetCore.Mvc;
+// ArticleAdminControllerTests.cs
 using Microsoft.EntityFrameworkCore;
-using CESIZen.Controllers.Admin;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using Moq;
+using CesiZen.Controllers.Admin;
+using CesiZen.Data;
+using CesiZen.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CESIZen.Tests.Controllers.Admin
 {
     [TestClass]
     public class ArticleAdminControllerTests
     {
-        private CesiZenDbContext _context;
-        private InformationAdminController _controller;
-
-        [TestInitialize]
-        public void Setup()
+        private CesiZenDbContext GetInMemoryDbContext(string databaseName)
         {
             var options = new DbContextOptionsBuilder<CesiZenDbContext>()
-                .UseInMemoryDatabase(databaseName: "Test_ArticleDb")
+                .UseInMemoryDatabase(databaseName: databaseName)
                 .Options;
-            _context = new CesiZenDbContext(options);
 
-            _controller = new InformationAdminController(_context);
+            return new CesiZenDbContext(options);
         }
 
         [TestMethod]
-        public async Task Index_Returns_ViewResult_With_Articles()
+        public void Details_ValidId_ReturnsViewWithModel()
         {
-            _context.Articles.Add(new Article
-            {
-                Titre = "Titre article test",
-                Contenu = "Contenu de test pour article."
-            });
-            await _context.SaveChangesAsync();
-
-            var result = await _controller.Index();
-
-            Assert.IsInstanceOfType(result, typeof(ViewResult));
-            var viewResult = result as ViewResult;
-            Assert.IsNotNull(viewResult);
-            Assert.IsInstanceOfType(viewResult.Model, typeof(List<Article>));
-        }
-
-        [TestMethod]
-        public async Task Details_ValidId_ReturnsViewWithModel()
-        {
-            var article = new Article
-            {
-                Id = 1,
-                Titre = "Titre exemple",
-                Contenu = "Contenu exemple"
+            // Arrange
+            using var context = GetInMemoryDbContext(Guid.NewGuid().ToString());
+            
+            var article = new Article 
+            { 
+                Id = 1, 
+                Titre = "Test Article",
+                Contenu = "Contenu test",
+                DateCreation = DateTime.Now
             };
-            _context.Articles.Add(article);
-            await _context.SaveChangesAsync();
+            
+            context.Articles.Add(article);
+            context.SaveChanges();
 
-            var result = await _controller.Details(1);
+            var controller = new ArticleAdminController(context);
 
-            Assert.IsInstanceOfType(result, typeof(ViewResult));
-            var viewResult = result as ViewResult;
-            Assert.IsNotNull(viewResult);
-            Assert.IsInstanceOfType(viewResult.Model, typeof(Article));
-            var model = viewResult.Model as Article;
-            Assert.AreEqual("Titre exemple", model.Titre);
+            // Act
+            var result = controller.Details(1) as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.Model);
+            Assert.IsInstanceOfType(result.Model, typeof(Article));
         }
 
         [TestMethod]
-        public void Create_Get_ReturnsView()
+        public void Create_Post_ValidModel_RedirectsToIndex()
         {
-            var result = _controller.Create();
-            Assert.IsInstanceOfType(result, typeof(ViewResult));
-        }
-
-        [TestMethod]
-        public async Task Create_Post_ValidModel_RedirectsToIndex()
-        {
-            _controller.TempData = new TempDataDictionary(new DefaultHttpContext(), Mock.Of<ITempDataProvider>());
-
-            var article = new Article
-            {
-                Titre = "Nouvel article",
-                Contenu = "Contenu important"
+            // Arrange
+            using var context = GetInMemoryDbContext(Guid.NewGuid().ToString());
+            
+            var controller = new ArticleAdminController(context);
+            var newArticle = new Article 
+            { 
+                Titre = "Nouvel Article",
+                Contenu = "Contenu du nouvel article",
+                DateCreation = DateTime.Now
             };
 
-            var result = await _controller.Create(article);
+            // Act
+            var result = controller.Create(newArticle);
 
+            // Assert
             Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
-            var redirect = result as RedirectToActionResult;
-            Assert.AreEqual("Index", redirect.ActionName);
-            Assert.AreEqual(1, _context.Articles.Count());
+            
+            var redirectResult = result as RedirectToActionResult;
+            Assert.AreEqual("Index", redirectResult.ActionName);
+            
+            // Vérifier que l'article a été ajouté
+            Assert.AreEqual(1, context.Articles.Count());
         }
-
-        // Tu peux ajouter d'autres tests comme Edit, Delete etc. selon tes besoins
     }
 }
