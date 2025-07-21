@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace CesiZen.Data
+namespace CESIZen.Data
 {
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<CesiZenDbContext>
     {
