@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using CesiZen.Data;
 using Microsoft.AspNetCore.Identity;
-using CESIZen.Models; // Ajoutez le namespace de votre modèle Utilisateur
+using CESIZen.Models; // Ajoutez le namespace de votre modï¿½le Utilisateur
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,10 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<CesiZenDbContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+    ));
 
-// Configurer Identity avec Utilisateur personnalisé
+
+// Configurer Identity avec Utilisateur personnalisï¿½
 builder.Services.AddIdentity<Utilisateur, IdentityRole<int>>(options => {
     options.Password.RequiredLength = 4;
     options.Password.RequireDigit = false;
@@ -61,14 +64,14 @@ app.MapControllerRoute(
 
 
 
-// Initialisation des rôles et utilisateurs
+// Initialisation des rï¿½les et utilisateurs
 using (var scope = app.Services.CreateScope())
 {
     var serviceProvider = scope.ServiceProvider;
     var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole<int>>>();
     var userManager = serviceProvider.GetRequiredService<UserManager<Utilisateur>>();
 
-    // Créer les rôles
+    // Crï¿½er les rï¿½les
     string[] roleNames = { "Admin", "User" };
 
     foreach (var roleName in roleNames)
