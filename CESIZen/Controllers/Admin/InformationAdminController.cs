@@ -1,160 +1,52 @@
-﻿using CesiZen.Data;
-using CESIZen.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.EntityFrameworkCore;
+using CESIZen.Controllers.Admin;
+using CesiZen.Data;
+using CESIZen.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CESIZen.Controllers.Admin
+namespace CESIZen.Tests.Controllers.Admin
 {
-    [Authorize(Roles = "Admin")]
-    [Route("Admin/[controller]/[action]")]
-    public class InformationAdminController : Controller
+    [TestClass]
+    public class ArticleAdminControllerTests
     {
-        private readonly CesiZenDbContext _context;
-
-        public InformationAdminController(CesiZenDbContext context)
+        private CesiZenDbContext GetInMemoryDbContext(string databaseName)
         {
-            _context = context;
+            var options = new DbContextOptionsBuilder<CesiZenDbContext>()
+                .UseInMemoryDatabase(databaseName: databaseName)
+                .Options;
+
+            return new CesiZenDbContext(options);
         }
 
-        // GET: Admin/Articles
-        public async Task<IActionResult> Index()
+        [TestMethod]
+        public async Task Create_Post_ValidModel_RedirectsToIndex()
         {
-            var articles = await _context.Articles
-             .ToListAsync();
+            // Arrange
+            using var context = GetInMemoryDbContext(Guid.NewGuid().ToString());
 
-            return View("~/Views/Admin/Information/Index.cshtml", articles);
+            var controller = new InformationAdminController(context);
+
+            // Mock TempData
+            var httpContext = new DefaultHttpContext();
+            var tempData = new TempDataDictionary(httpContext, Mock.Of<ITempDataProvider>());
+            controller.TempData = tempData;
+
+            var newArticle = new Article
+            {
+                Titre = "Test Titre",
+                Contenu = "Test Contenu"
+            };
+
+            // Act
+            var result = await controller.Create(newArticle) as RedirectToActionResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual("Index", result.ActionName);
+            Assert.AreEqual(1, context.Articles.Count());
         }
-
-        // GET: Admin/Articles/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var articles = await _context.Articles
-                .FirstOrDefaultAsync(m => m.Id == id);
-
-            if (articles == null)
-            {
-                return NotFound();
-            }
-
-            return View("~/Views/Admin/Information/Details.cshtml", articles);
-        }
-
-        // GET: Admin/Articles/Create
-        public IActionResult Create()
-        {
-            return View("~/Views/Admin/Information/Create.cshtml");
-        }
-
-        // POST: Admin/Articles/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Titre,Contenu")] Article article)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(article);
-                await _context.SaveChangesAsync();
-                TempData["Success"] = "L'article a été créée avec succès.";
-                return RedirectToAction(nameof(Index));
-            }
-            return View("~/Views/Admin/Information/Create.cshtml", article);
-        }
-
-        // GET: Admin/Articles/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var article = await _context.Articles.FindAsync(id);
-            if (article == null)
-            {
-                return NotFound();
-            }
-
-            return View("~/Views/Admin/Information/Edit.cshtml", article);
-        }
-
-        // POST: Admin/Articles/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Titre,Contenu")] Article article)
-        {
-            if (id != article.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(article);
-                    await _context.SaveChangesAsync();
-                    TempData["Success"] = "L'information a été modifiée avec succès.";
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!InformationExists(article.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View("~/Views/Admin/Information/Edit.cshtml", article);
-        }
-
-        private bool InformationExists(int id)
-        {
-            return _context.Articles.Any(e => e.Id == id);
-        }
-
-        // GET: Admin/Articles/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var article = await _context.Articles
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (article == null)
-            {
-                return NotFound();
-            }
-
-            return View("~/Views/Admin/Information/Delete.cshtml", article);
-        }
-
-        // POST: Admin/Articles/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var article = await _context.Articles.FindAsync(id);
-            if (article != null)
-            {
-                _context.Articles.Remove(article);
-                await _context.SaveChangesAsync();
-                TempData["Success"] = "L'article a été supprimée avec succès.";
-            }
-            return RedirectToAction(nameof(Index));
-        }
-
-
     }
 }

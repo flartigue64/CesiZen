@@ -22,7 +22,7 @@ namespace CESIZen.Tests.Controllers
         }
 
         [TestMethod]
-        public void Index_ReturnsViewResult()
+        public async Task Index_ReturnsViewResult()
         {
             // Arrange
             using var context = GetInMemoryDbContext(Guid.NewGuid().ToString());
@@ -36,7 +36,7 @@ namespace CESIZen.Tests.Controllers
                 ContenuHtml = "<p>Contenu HTML de l'activité</p>"
             };
             context.Activites.Add(testActivite);
-            context.SaveChanges();
+            await context.SaveChanges();
 
             var mockLogger = new Mock<ILogger<HomeController>>();
             var controller = new HomeController(mockLogger.Object, context);
@@ -71,12 +71,21 @@ namespace CESIZen.Tests.Controllers
             var mockLogger = new Mock<ILogger<HomeController>>();
             var controller = new HomeController(mockLogger.Object, context);
 
+            // Injecter un faux HttpContext avec TraceIdentifier
+            var httpContext = new DefaultHttpContext();
+            httpContext.TraceIdentifier = "test-trace-id";
+            controller.ControllerContext = new ControllerContext()
+            {
+                HttpContext = httpContext
+            };
+
             // Act
             var result = controller.Error() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result.Model, typeof(ErrorViewModel));
+            Assert.AreEqual("test-trace-id", ((ErrorViewModel)result.Model).RequestId);
         }
     }
 }
