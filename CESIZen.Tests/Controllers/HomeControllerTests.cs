@@ -2,8 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
-using CesiZen.Controllers;
-using CesiZen.Data;
+using CESIZen.Controllers;
+using CESIZen.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CESIZen.Tests.Controllers
