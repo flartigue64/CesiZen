@@ -4,17 +4,69 @@
     ViewData["Title"] = "Création de compte";
 }
 
-<div class="container mt-5">
+<style>
+    body {
+        background-color: #f8f9fa; /* Blanc cassé */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    label {
+        font-weight: 500;
+        color: #495057;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        padding: 10px 12px;
+        border: 1px solid #ced4da;
+    }
+
+    .form-control:focus {
+        border-color: #03964E;
+        box-shadow: 0 0 0 0.2rem rgba(3, 150, 78, 0.25);
+    }
+
+    .btn-primary-custom {
+        background-color: #03964E;
+        color: #fff;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary-custom:hover {
+        background-color: #027b3d;
+    }
+
+    h2 {
+        color: #286291;
+        font-weight: 600;
+    }
+
+    .alert-info {
+        border-radius: 8px;
+    }
+</style>
+
+<div class="container py-5">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card shadow-sm border-0">
+        <div class="col-md-8 col-lg-6">
+            <div class="card p-4">
                 <div class="card-body">
-                    <h2 class="text-center mb-4" style="color: #286291;">Créer un compte</h2>
+                    <h2 class="text-center mb-4">Créer un compte</h2>
 
                     @if (ViewData["Message"] != null)
                     {
                         <div class="alert alert-info">@ViewData["Message"]</div>
                     }
+
                     <form asp-action="CreationCompte" method="post">
                         <div class="form-group mb-3">
                             <label asp-for="Pseudo"></label>
@@ -47,7 +99,7 @@
                         </div>
 
                         <div class="text-end">
-                            <button type="submit" class="btn" style="background-color: #286291; color: white;">Créer le compte</button>
+                            <button type="submit" class="btn btn-primary-custom">Créer le compte</button>
                         </div>
                     </form>
                 </div>
