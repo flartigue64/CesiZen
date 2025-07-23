@@ -64,16 +64,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index" style="color:#286291; font-weight:600;">Accueil</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Index" style="color:white; font-weight:600;">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Contenu" asp-action="Contenu" style="color:#286291; font-weight:600;">Article santé</a>
+                            <a class="nav-link" asp-controller="Contenu" asp-action="Contenu" style="color:white; font-weight:600;">Article santé</a>
                         </li>
 
                         @if (Context.Session.GetInt32("UtilisateurId") != null)
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Tracker" asp-action="JournalDeBord" style="color:#286291; font-weight:600;">Mon journal de Bord</a>
+                                <a class="nav-link" asp-controller="Tracker" asp-action="JournalDeBord" style="color:white; font-weight:600;">Mon journal de Bord</a>
                             </li>
                         }
 
@@ -81,7 +81,7 @@
                             @if (Context.Session.GetInt32("UtilisateurId") != null)
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Utilisateur" asp-action="Compte" style="color:#286291; font-weight:600;">Compte</a>
+                                    <a class="nav-link" asp-controller="Utilisateur" asp-action="Compte" style="color:white; font-weight:600;">Compte</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link logout-link" asp-controller="Utilisateur" asp-action="Deconnexion">Déconnexion</a>
@@ -90,7 +90,7 @@
                             else
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Utilisateur" asp-action="Connexion" style="color:#22844E; font-weight:600;">Connexion</a>
+                                    <a class="nav-link" asp-controller="Utilisateur" asp-action="Connexion" style="color:#F4D06F; font-weight:600;">Connexion</a>
                                 </li>
                             }
                         </ul>
@@ -98,10 +98,10 @@
                         @if (role == "Admin")
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Utilisateur" asp-action="ListeUtilisateurs" style="color:#B8860B; font-weight:600;">Gestion utilisateurs</a>
+                                <a class="nav-link" asp-controller="Utilisateur" asp-action="ListeUtilisateurs" style="color:#A7FFEB; font-weight:600;">Gestion utilisateurs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Emotion" asp-action="ListeEmotion" style="color:#B8860B; font-weight:600;">Gestion des émotions</a>
+                                <a class="nav-link" asp-controller="Emotion" asp-action="ListeEmotion" style="color:#A7FFEB; font-weight:600;">Gestion des émotions</a>
                             </li>
                         }
                     </ul>
