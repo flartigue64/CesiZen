@@ -23,6 +23,7 @@ jobs:
           target: "/home/azureuser/"
           rm: false
           strip_components: 0
+          debug: true
 
       - name: Start App
         uses: appleboy/ssh-action@v1.0.3
