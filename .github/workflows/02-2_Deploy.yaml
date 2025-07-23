@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.AZURE_PASSWORD }}
 
           source: "./docker-compose.yaml"
-          target: "/home/azureuser/"
+          target: "/home/flartigue/"
           rm: false
           strip_components: 0
           debug: true
@@ -34,7 +34,7 @@ jobs:
           password: ${{ secrets.AZURE_PASSWORD }}
           script: |
             echo ${{ secrets.MONOREPO_PAT }} | sudo docker login ghcr.io -u LouisLucas64 --password-stdin
-            sudo docker pull ghcr.io/louislucas64/cesizen:latest
+            sudo docker pull ghcr.io/flartigue64/cesizen:latest
             sudo docker-compose down --remove-orphans
             sudo docker-compose pull
             sudo docker-compose up -d --force-recreate
