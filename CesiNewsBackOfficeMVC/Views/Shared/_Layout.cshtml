@@ -35,7 +35,7 @@
             }
     </style>
 </head>
-<body>
+<body style="background-color: #04BB61;">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -61,10 +61,6 @@
                                 <a class="nav-link" asp-controller="Tracker" asp-action="JournalDeBord" style="color:#286291; font-weight:600;">Mon journal de Bord</a>
                             </li>
                         }
-
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Utilisateur" asp-action="CreationCompte" style="color:#286291; font-weight:600;">Inscription</a>
-                        </li>
 
                         <ul class="navbar-nav ml-auto">
                             @if (Context.Session.GetInt32("UtilisateurId") != null)
