@@ -6,14 +6,20 @@
 
 <style>
     body {
-        background-color: #f8f9fa; /* Blanc cassé */
+        background-color: #f5f3ef; /* Blanc cassé proche du beige */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .card {
         background-color: #ffffff;
+        border: none;
         border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+        color: #286291;
+        font-weight: 600;
     }
 
     label {
@@ -25,29 +31,25 @@
         border-radius: 8px;
         padding: 10px 12px;
         border: 1px solid #ced4da;
+        transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
 
     .form-control:focus {
         border-color: #03964E;
-        box-shadow: 0 0 0 0.2rem rgba(3, 150, 78, 0.25);
+        box-shadow: 0 0 0 0.2rem rgba(3, 150, 78, 0.2);
     }
 
-    .btn-primary-custom {
+    .btn-custom {
         background-color: #03964E;
-        color: #fff;
+        color: white;
         border: none;
-        padding: 10px 24px;
         border-radius: 8px;
+        padding: 10px 20px;
         transition: background-color 0.3s ease;
     }
 
-    .btn-primary-custom:hover {
-        background-color: #027b3d;
-    }
-
-    h2 {
-        color: #286291;
-        font-weight: 600;
+    .btn-custom:hover {
+        background-color: #027a3b;
     }
 
     .alert-info {
@@ -55,10 +57,10 @@
     }
 </style>
 
-<div class="container py-5">
+<div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-            <div class="card p-4">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0">
                 <div class="card-body">
                     <h2 class="text-center mb-4">Créer un compte</h2>
 
@@ -66,7 +68,6 @@
                     {
                         <div class="alert alert-info">@ViewData["Message"]</div>
                     }
-
                     <form asp-action="CreationCompte" method="post">
                         <div class="form-group mb-3">
                             <label asp-for="Pseudo"></label>
@@ -99,7 +100,7 @@
                         </div>
 
                         <div class="text-end">
-                            <button type="submit" class="btn btn-primary-custom">Créer le compte</button>
+                            <button type="submit" class="btn btn-custom">Créer le compte</button>
                         </div>
                     </form>
                 </div>
