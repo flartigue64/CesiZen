@@ -21,7 +21,7 @@ services:
 
   cesizen_app:
     container_name: cesizen_app
-    image: ghcr.io/louislucas64/cesizen:latest
+    image: ghcr.io/flartigue64/cesizen:latest
     environment:
       BDD_HOST: cesizen_db
     ports:
