@@ -14,11 +14,16 @@
     <link rel="stylesheet" href="~/CESIZenBackOfficeMVC.styles.css" asp-append-version="true" />
 
     <style>
+        body {
+            background-color: #04BB61;
+        }
+
         /* Effet hover pour tous les liens du menu sauf déconnexion */
         .nav-link:not(.logout-link):hover {
             filter: brightness(110%);
             text-decoration: none;
         }
+
         /* Style spécial déconnexion avec hover */
         .logout-link {
             color: #dc3545 !important;
@@ -29,15 +34,25 @@
             transition: filter 0.2s ease-in-out;
         }
 
-            .logout-link:hover {
-                filter: brightness(85%);
-                text-decoration: none;
-            }
+        .logout-link:hover {
+            filter: brightness(85%);
+            text-decoration: none;
+        }
+
+        .transparent-container {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: transparent;
+        }
     </style>
 </head>
-<body style="background-color: #04BB61;">
+<body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/Logo.png" alt="CESIZen Logo" style="height: 80px;" />
@@ -94,7 +109,8 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+
+    <div class="container transparent-container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -105,6 +121,7 @@
             &copy; 2025 - CESIZen
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
