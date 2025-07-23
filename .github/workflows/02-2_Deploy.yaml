@@ -33,7 +33,7 @@ jobs:
           username: ${{ secrets.AZURE_USER }}
           password: ${{ secrets.AZURE_PASSWORD }}
           script: |
-            echo ${{ secrets.MONOREPO_PAT }} | sudo docker login ghcr.io -u LouisLucas64 --password-stdin
+            echo ${{ secrets.MONOREPO_PAT }} | sudo docker login ghcr.io -u flartigue64 --password-stdin
             sudo docker pull ghcr.io/flartigue64/cesizen:latest
             sudo docker-compose down --remove-orphans
             sudo docker-compose pull
