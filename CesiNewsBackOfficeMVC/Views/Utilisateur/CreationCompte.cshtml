@@ -1,0 +1,117 @@
+﻿@model CESIZenModel.Entities.Utilisateur
+
+@{
+    ViewData["Title"] = "Création de compte";
+}
+
+<style>
+    body {
+        background-color: #03964E; /* Fond principal vert */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+        background-color: #f5f3ef; /* Blanc cassé pour le formulaire */
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+
+    h2 {
+        color: #286291;
+        font-weight: 600;
+    }
+
+    label {
+        font-weight: 500;
+        color: #333;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-control:focus {
+        border-color: #03964E;
+        box-shadow: 0 0 0 0.2rem rgba(3, 150, 78, 0.2);
+    }
+
+    .btn {
+        background-color: #03964E;
+        color: white;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #027a3b;
+    }
+
+    .alert-info {
+        border-radius: 6px;
+        background-color: #e9f6f1;
+        color: #2f5f4f;
+        border: 1px solid #c5e4d8;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h2 class="text-center mb-4" style="color: #286291;">Créer un compte</h2>
+
+                    @if (ViewData["Message"] != null)
+                    {
+                        <div class="alert alert-info">@ViewData["Message"]</div>
+                    }
+                    <form asp-action="CreationCompte" method="post">
+                        <div class="form-group mb-3">
+                            <label asp-for="Pseudo"></label>
+                            <input asp-for="Pseudo" class="form-control" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Mdp">Mot de passe</label>
+                            <input asp-for="Mdp" type="password" class="form-control" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Nom"></label>
+                            <input asp-for="Nom" class="form-control" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Prenom"></label>
+                            <input asp-for="Prenom" class="form-control" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Mail"></label>
+                            <input asp-for="Mail" class="form-control" />
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label asp-for="Tel"></label>
+                            <input asp-for="Tel" class="form-control" />
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" class="btn">Créer le compte</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

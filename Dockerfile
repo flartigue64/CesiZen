@@ -1,31 +1,30 @@
-# Étape 1 : Build avec SDK .NET
+# Étape 1 : Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copier les fichiers de solution et projet
-COPY CESIZen.sln ./
-COPY CESIZen/CESIZen.csproj CESIZen/
+# Copier les fichiers de solution et de projets pour le restore
+COPY ["CESIZenAppli.sln", "./"]
+COPY ["CesiNewsBackOfficeMVC/CESIZenBackOfficeMVC.csproj", "CesiNewsBackOfficeMVC/"]
+COPY ["CesiNewsModel/CESIZenModel.csproj", "CesiNewsModel/"]
+COPY ["CESIZen.Tests/CESIZen.Tests.csproj", "CESIZen.Tests/"]
 
-# Restauration des dépendances
-RUN dotnet restore CESIZen/CESIZen.csproj
+# Restore des dépendances
+RUN dotnet restore "CESIZenAppli.sln"
 
-# Copier tout le contenu
+# Copier tout le code source
 COPY . .
 
-# Build et publish en Release
-WORKDIR /src/CESIZen
-RUN dotnet publish -c Release -o /app/publish
+# Build et publish du projet principal
+WORKDIR "/src/CesiNewsBackOfficeMVC"
+RUN dotnet build "CESIZenBackOfficeMVC.csproj" -c Release -o /app/build
+RUN dotnet publish "CESIZenBackOfficeMVC.csproj" -c Release -o /app/publish --no-restore
 
-# Étape 2 : Runtime (image plus légère)
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+# Étape 2 : Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-
-# Copier les fichiers publiés depuis l'étape build
 COPY --from=build /app/publish .
 
-# Exposer le port (si nécessaire)
-EXPOSE 80
-EXPOSE 443
+ENV ASPNETCORE_URLS=http://+:5000
+EXPOSE 5000
 
-# Lancer l'application
-ENTRYPOINT ["dotnet", "CESIZen.dll"]
+ENTRYPOINT ["dotnet", "CESIZenBackOfficeMVC.dll"]
