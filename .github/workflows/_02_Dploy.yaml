@@ -11,7 +11,12 @@ jobs:
     uses: ./.github/workflows/z_Docker-Ghcr.yaml
     secrets: inherit
 
-  Deploy:
+  TrivyScan:
     needs: [Dockerbuild]
+    uses: ./.github/workflows/02-2_TrivyScan.yaml
+    secrets: inherit
+
+  Deploy:
+    needs: [TrivyScan]
     uses: ./.github/workflows/02-2_Deploy.yaml
     secrets: inherit
