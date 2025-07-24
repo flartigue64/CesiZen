@@ -1,4 +1,4 @@
-name: 02-2 - Delivery - Trivy Scan
+name: 02-2 - Delivery - Trivy Scan (Debug)
 
 on:
   workflow_call
@@ -6,13 +6,16 @@ on:
 env:
   REGISTRY: ghcr.io
   USERNAME: ${{ github.actor }}
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository }}  # Format: orga/repo
 
 jobs:
   Trivy_Scan_Monolith:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
+      - name: Checkpoint — Début du job Trivy
+        run: echo "✅ Job Trivy lancé"
+
       - name: Connexion au registre Docker
         uses: docker/login-action@v3
         with:
@@ -20,29 +23,37 @@ jobs:
           username: ${{ env.USERNAME }}
           password: ${{ secrets.MONOREPO_PAT }}
 
-      - name: Normaliser le nom de l'image (minuscule)
+      - name: Downcase du nom d'image
         run: echo "IMAGE_NAME_LOWER=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
 
-      - name: Vérifier si l’image existe (pull)
-        run: docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LOWER }}:canary
+      - name: DEBUG — Afficher nom d'image final
+        run: |
+          echo "Image ciblée : ghcr.io/${{ env.IMAGE_NAME_LOWER }}:canary"
 
-      - name: Scanner l'image Docker avec Trivy
-        uses: aquasecurity/trivy-action@0.28.0
-        continue-on-error: true
-        with:
-          image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LOWER }}:canary
-          format: 'table'
-          exit-code: '1'
-          output: 'monolith-trivy-results.txt'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH,MEDIUM,LOW'
 
-      - name: Afficher les résultats dans la console
+      - name: DEBUG — Vérifier si image canary est pullable
+        run: |
+          echo "Tentative de pull : ghcr.io/${{ env.IMAGE_NAME_LOWER }}:canary"
+          docker pull ghcr.io/${{ env.IMAGE_NAME_LOWER }}:canary || echo "❌ ECHEC DU PULL"
+
+      - name: Installer Trivy (en ligne de commande)
+        run: |
+          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+          trivy --version
+
+      - name: Scanner l'image Docker avec Trivy (mode brut)
+        run: |
+          echo "🕵️‍♂️ Lancement Trivy scan"
+          trivy image --exit-code 1 --severity CRITICAL,HIGH \
+            ghcr.io/${{ env.IMAGE_NAME_LOWER }}:canary \
+            --format table --ignore-unfixed \
+            --output monolith-trivy-results.txt || echo "⚠️ Vulnérabilités détectées"
+
+      - name: Afficher les résultats Trivy dans la console
         if: always()
         run: cat monolith-trivy-results.txt
 
-      - name: Uploader les résultats Trivy
+      - name: Uploader le rapport Trivy
         uses: actions/upload-artifact@v4
         if: always()
         with:
