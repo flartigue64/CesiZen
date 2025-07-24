@@ -23,6 +23,9 @@ jobs:
       - name: Normaliser le nom de l'image (minuscule)
         run: echo "IMAGE_NAME_LOWER=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
 
+      - name: Vérifier si l’image existe (pull)
+        run: docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LOWER }}:canary
+
       - name: Scanner l'image Docker avec Trivy
         uses: aquasecurity/trivy-action@0.28.0
         continue-on-error: true
