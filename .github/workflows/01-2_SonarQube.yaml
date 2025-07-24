@@ -66,10 +66,11 @@ jobs:
       - name: Run tests with coverage
         shell: powershell
         run: |
-          dotnet test CesiZenAppli.sln `
+          dotnet test CesiZen.Tests/CesiZen.Tests.csproj `
             --collect:"XPlat Code Coverage" `
             --results-directory ./TestResults `
             --logger trx
+
 
 
       - name: Check generated coverage file
