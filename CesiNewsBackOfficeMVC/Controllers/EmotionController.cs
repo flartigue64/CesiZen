@@ -23,7 +23,6 @@ namespace CesiNewsBackOfficeMVC.Controllers
             var role = HttpContext.Session.GetString("Role");
 
             if (role != "Admin")
-                //return Forbid(); 
                 RedirectToAction("Index", "Home");
 
             var emotions = await _context.Emotions.ToListAsync();
