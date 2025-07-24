@@ -10,13 +10,13 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  USERNAME: ${{github.actor}}
-  IMAGE_NAME: ${{github.repository}} #orga/repo
+  USERNAME: ${{ github.actor }}
+  IMAGE_NAME: ${{ github.repository }}  # orga/repo
 
 jobs:
   Build-Push-DockerGhcr:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -24,19 +24,21 @@ jobs:
       - name: Registry Login
         uses: docker/login-action@v3
         with:
-          registry: ${{env.REGISTRY}}
-          username: ${{env.USERNAME}}
-          password: ${{secrets.MONOREPO_PAT}}
+          registry: ${{ env.REGISTRY }}
+          username: ${{ env.USERNAME }}
+          password: ${{ secrets.MONOREPO_PAT }}
 
       - name: Downcase Image Name
         run: echo "IMAGE_NAME_LOWER=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
 
-      - name: Build & Push Monolith Image
+      - name: Build & Push Monolith Image (latest + canary)
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: ${{env.REGISTRY}}/${{env.IMAGE_NAME_LOWER}}:${{inputs.docker-mode}}
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LOWER }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LOWER }}:canary
 
-      - name: Print
+      - name: Print ENV (debug)
         run: env | sort
